@@ -4,7 +4,7 @@
 array.delete_if { |el| el =~ /\d+/}
 # p array.size
 File.open('NewSentencesDEMO.txt','w+') do |file|
-
+    file.puts *array
 end
 
 stringFile = array.join
