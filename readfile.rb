@@ -4,7 +4,7 @@
 array.delete_if { |el| el =~ /\d+/}
 # p array.size
 File.open('NewSentencesDEMO.txt','w+') do |file|
-    file.puts *array
+    file.puts *array.join.split('.').map!{|el| el + '.'}
 end
 
 stringFile = array.join
