@@ -30,6 +30,10 @@ p arraySentences.size
 arraySentences.compact!
 p arraySentences.size
 
+arraySentences.delete_if {|el| el == ''}
+p arraySentences.size
+p arraySentences
+
 
 
 
