@@ -20,12 +20,15 @@ File.open('NewUniqWords.txt','w+') do |file|
 end
 
 arrayTransletion = File.readlines('TransletionG.txt', chomp: true)
-p arrayTransletion
-p arrayTransletion.size
 
 arrayWordsPlusTaransletion = arrWords.zip(arrayTransletion)
 hasharrayWordsPlusTaransletion = arrayWordsPlusTaransletion.to_h
-p hasharrayWordsPlusTaransletion
+
+arraySentences = File.readlines('NewSentences.txt',chomp: true)
+p arraySentences
+p arraySentences.size
+arraySentences.compact!
+p arraySentences.size
 
 
 
