@@ -14,6 +14,8 @@ p stringFile
 arrWords = stringFile.split(' ');
 p arrWords
 p arrWords.size
+arrWords.uniq!
+p arrWords.size
 
 
 
