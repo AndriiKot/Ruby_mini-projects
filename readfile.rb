@@ -25,14 +25,12 @@ arrayWordsPlusTaransletion = arrWords.zip(arrayTransletion)
 hasharrayWordsPlusTaransletion = arrayWordsPlusTaransletion.to_h
 
 arraySentences = File.readlines('NewSentences.txt',chomp: true)
-p arraySentences
-p arraySentences.size
 arraySentences.compact!
-p arraySentences.size
-
 arraySentences.delete_if {|el| el == ''}
-p arraySentences.size
-p arraySentences
+
+File.open('DEMO.txt',"w+") do |file|
+    file.puts *arraySentences
+end
 
 
 
