@@ -23,7 +23,8 @@ arrayTransletion = File.readlines('TransletionG.txt', chomp: true)
 p arrayTransletion
 p arrayTransletion.size
 
-
+arrayWordsPlusTaransletion = arrWords.zip(arrayTransletion)
+p arrayWordsPlusTaransletion
 
 
 
