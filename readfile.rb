@@ -19,6 +19,25 @@ File.open('NewUniqWords.txt','w+') do |file|
     file.puts "words: #{arrWords.size}"
 end
 
+arrayTransletion = File.readlines('TransletionG.txt', chomp: true)
+p arrayTransletion
+p arrayTransletion.size
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
