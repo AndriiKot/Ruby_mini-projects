@@ -24,8 +24,8 @@ p arrayTransletion
 p arrayTransletion.size
 
 arrayWordsPlusTaransletion = arrWords.zip(arrayTransletion)
-p arrayWordsPlusTaransletion
-
+hasharrayWordsPlusTaransletion = arrayWordsPlusTaransletion.to_h
+p hasharrayWordsPlusTaransletion
 
 
 
