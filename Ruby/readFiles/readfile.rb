@@ -10,8 +10,10 @@ File.open('NewSentences.txt','w+') do |file|
     file.puts *newArraySentences.map!{|el| el + '.' if not el.empty?}
 end
 
-# stringFile = array.join
-# stringFile.gsub!(/[:,!.\\=?"()]/,' ')
+stringFile = arraySentencesOriginal.join
+stringFile.gsub!(/[:,!.\\=?"()]\d+/,' ')
+
+p stringFile
 
 # arrWords = stringFile.split(' ');
 # arrWords.uniq!
