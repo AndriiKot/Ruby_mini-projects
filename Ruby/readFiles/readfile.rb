@@ -1,10 +1,7 @@
 ﻿arraySentencesOriginal = File.readlines('SentencesORIGINAL.txt',chomp: true)
-arraySentencesRemoveInt = arraySentencesOriginal.delete_if {|el| el =~ /\d+/}
-p arraySentencesOriginal
-# p arraySentencesRemoveInt
+arraySentencesRemoveInt = arraySentencesOriginal.dup.delete_if {|el| el =~ /\d+/}
 
-newArraySentences = arraySentencesOriginal.dup
-                    .delete_if { |el| el =~ /\d+/ }
+newArraySentences = arraySentencesRemoveInt.dup
                     .join.split('.')
                     .delete_if{|el| el == ''}
 
@@ -13,10 +10,8 @@ File.open('NewSentences.txt','w+') do |file|
     file.puts *newArraySentences.map!{|el| el + '.' if not el.empty?}
 end
 
-stringFile = arraySentencesOriginal.join
-stringFile.gsub!(/[:,!.\\=?"()]\d+/,' ')
-
-# p stringFile
+stringFile = arraySentencesRemoveInt.join
+stringFile.gsub!(/[:,!.\\=?"()]/,' ')
 
 # arrWords = stringFile.split(' ');
 # arrWords.uniq!
