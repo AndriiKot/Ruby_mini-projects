@@ -7,6 +7,10 @@ newArraySentences.delete_if{|el| el == ''}
 p newArraySentences.size
 
 gets
+array = File.readlines('SentencesORIGINAL.txt',chomp: true)
+testArray = array.dup.delete_if { |el| el =~ /\d+/ }.join.split('.').delete_if{|el| el == ''}
+p testArray.size
+
 
 File.open('NewSentences.txt','w+') do |file|
     file.puts *newArraySentences.map!{|el| el + '.' if not el.empty?}
