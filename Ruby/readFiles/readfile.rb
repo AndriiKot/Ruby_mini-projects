@@ -1,9 +1,10 @@
 ﻿arraySentencesOriginal = File.readlines('SentencesORIGINAL.txt',chomp: true)
 arraySentencesOriginal.delete_if { |el| el =~ /\d+/ }
 newArraySentences = arraySentencesOriginal.dup.join.split('.')
-p newArraySentences
-newArraySentences.delete_if{|el| el == ''};
-p newArraySentences
+
+p newArraySentences.size
+newArraySentences.delete_if{|el| el == ''}
+p newArraySentences.size
 
 gets
 
