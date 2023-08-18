@@ -2,7 +2,10 @@
 arraySentencesOriginal.delete_if { |el| el =~ /\d+/ }
 newArraySentences = arraySentencesOriginal.dup.join.split('.')
 p newArraySentences
+newArraySentences.delete_if{|el| el == ''};
+p newArraySentences
 
+gets
 
 File.open('NewSentences.txt','w+') do |file|
     file.puts *newArraySentences.map!{|el| el + '.' if not el.empty?}
