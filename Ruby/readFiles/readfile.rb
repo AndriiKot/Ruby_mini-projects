@@ -1,15 +1,6 @@
 ﻿arraySentencesOriginal = File.readlines('SentencesORIGINAL.txt',chomp: true)
-arraySentencesOriginal.delete_if { |el| el =~ /\d+/ }
-newArraySentences = arraySentencesOriginal.dup.join.split('.')
-
+newArraySentences = arraySentencesOriginal.dup.delete_if { |el| el =~ /\d+/ }.join.split('.').delete_if{|el| el == ''}
 p newArraySentences.size
-newArraySentences.delete_if{|el| el == ''}
-p newArraySentences.size
-
-gets
-array = File.readlines('SentencesORIGINAL.txt',chomp: true)
-testArray = array.dup.delete_if { |el| el =~ /\d+/ }.join.split('.').delete_if{|el| el == ''}
-p testArray.size
 
 
 File.open('NewSentences.txt','w+') do |file|
