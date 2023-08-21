@@ -1,26 +1,28 @@
-﻿folder = 'newText'
+﻿Dir.new('Tri medvede').Dir.mkdir("NewTEXT")
 arraySentencesOriginal = File.readlines('Tri medvede/originalText/SentencesORIGINAL.txt',chomp: true)
 arraySentencesRemoveInt = arraySentencesOriginal.dup.delete_if {|el| el =~ /\d+/}
 
+# d = Dir.new('Tri medvede/NewTEXT')
+# p d
 newArraySentences = arraySentencesRemoveInt.dup
                     .join.split('.')
                     .delete_if{|el| el == ''}
 
-File.open("Tri medvede/#{folder}/NewSentences.txt",'w') do |file|
+File.open("Tri medvede/NewSentences.txt",'w') do |file|
     file.puts *newArraySentences.map!{|el| el + '.'}
 end
 
-stringFile = arraySentencesRemoveInt.join
-stringFile.gsub!(/[:,!.\\=?"()]/,' ')
+# stringFile = arraySentencesRemoveInt.join
+# stringFile.gsub!(/[:,!.\\=?"()]/,' ')
 
-arrWords = stringFile.split(' ');
-arrWords.uniq!
+# arrWords = stringFile.split(' ');
+# arrWords.uniq!
 
-File.open("Tri medvede/#{folder}/NewUniqWords.txt",'w') do |file|
-    file.puts *arrWords
-    file.puts "-" * 145
-    file.puts "Unique words: #{arrWords.size}"
-end
+# File.open("Tri medvede/#{folder}/NewUniqWords.txt",'w') do |file|
+#     file.puts *arrWords
+#     file.puts "-" * 145
+#     file.puts "Unique words: #{arrWords.size}"
+# end
 
 # arrayTransletion = File.readlines('TransletionG.txt', chomp: true)
 
