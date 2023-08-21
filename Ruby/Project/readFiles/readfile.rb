@@ -3,24 +3,27 @@ arraySentencesOriginal = nil
 
 entries.each do |file|
     if file.include? 'SentencesORIGINAL.txt'
-        arraySentencesOriginal = File.readlines('SentencesORIGINAL.txt',chomp: true)
+        p arraySentencesOriginal
+        # arraySentencesOriginal = File.readlines('SentencesORIGINAL.txt',chomp: true)
+        p file
+        p arraySentencesOriginal
         break;
     end
 end
 
-arraySentencesRemoveInt = arraySentencesOriginal.dup.delete_if {|el| el =~ /\d+/}
+# arraySentencesRemoveInt = arraySentencesOriginal.dup.delete_if {|el| el =~ /\d+/}
 
-newArraySentences = arraySentencesRemoveInt.dup
-                    .join.split('.')
-                    .delete_if{|el| el == ''}
+# newArraySentences = arraySentencesRemoveInt.dup
+#                     .join.split('.')
+#                     .delete_if{|el| el == ''}
 
 
-File.open('NewSentences.txt','w+') do |file|
-    file.puts *newArraySentences.map!{|el| el + '.' if not el.empty?}
-end
+# File.open('NewSentences.txt','w+') do |file|
+#     file.puts *newArraySentences.map!{|el| el + '.' if not el.empty?}
+# end
 
-stringFile = arraySentencesRemoveInt.join
-stringFile.gsub!(/[:,!.\\=?"()]/,' ')
+# stringFile = arraySentencesRemoveInt.join
+# stringFile.gsub!(/[:,!.\\=?"()]/,' ')
 
 # arrWords = stringFile.split(' ');
 # arrWords.uniq!
