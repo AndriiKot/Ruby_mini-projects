@@ -1,4 +1,16 @@
-﻿arraySentencesOriginal = File.readlines('SentencesORIGINAL.txt',chomp: true)
+﻿entries = Dir.open('originalText')
+# entries.include? 'SentencesORIGINAL.txt'
+arraySentencesOriginal = nil
+
+entries.each do |file|
+    if file.include? 'SentencesORIGINAL.txt'
+        arraySentencesOriginal = File.readlines('SentencesORIGINAL.txt',chomp: true)
+        break;
+    end
+end
+
+p arraySentencesOriginal
+
 arraySentencesRemoveInt = arraySentencesOriginal.dup.delete_if {|el| el =~ /\d+/}
 
 newArraySentences = arraySentencesRemoveInt.dup
