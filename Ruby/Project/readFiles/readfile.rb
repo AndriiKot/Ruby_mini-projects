@@ -4,17 +4,20 @@ originalText = 'OriginalText'
 sentencesOriginalText = 'SentencesORIGINAL.txt'
 newSentencesText = 'NewSentences.txt'
 
-Dir.chdir(newDir ) {| path | Dir.mkdir(newTextDir) }
+Dir.chdir(newDir) {| path | Dir.mkdir(newTextDir) }
 
 arraySentencesOriginal = File.readlines("#{newDir}/#{originalText}/#{sentencesOriginalText}",chomp: true)
 arraySentencesRemoveInt = arraySentencesOriginal.dup.delete_if {|el| el =~ /\d+/}
-p arraySentencesOriginal
 
 newArraySentences = arraySentencesRemoveInt.dup
                     .join.split('.')
                     .delete_if{|el| el == ''}
+File.open("#{newDir}/DEMO.txt","w+") { |file|
+    file.puts "Hello DEMO!!!"
+    file.puts "HI!!"
+}
 
-# File.open("Tri medvede/NewSentences.txt",'w+') do |file|
+# File.open("#{newDir}/#{newTextDir}/#{newSentencesText}",'w+') do |file|
 #     file.puts *newArraySentences.map!{|el| el + '.'}
 # end
 
