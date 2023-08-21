@@ -1,16 +1,22 @@
-﻿Dir.chdir('Tri medvede' ) {| path | Dir.mkdir("NewTEXT") }
-arraySentencesOriginal = File.readlines('Tri medvede/originalText/SentencesORIGINAL.txt',chomp: true)
-arraySentencesRemoveInt = arraySentencesOriginal.dup.delete_if {|el| el =~ /\d+/}
+﻿newDir = 'Tri medvede'
+newTextDir = 'NewText'
+originalText = 'OriginalText'
+sentencesOriginalText = 'SentencesORIGINAL.txt'
+newSentencesText = 'NewSentences.txt'
 
-# d = Dir.new('Tri medvede/NewTEXT')
-# p d
+Dir.chdir(newDir ) {| path | Dir.mkdir(newTextDir) }
+
+arraySentencesOriginal = File.readlines("#{newDir}/#{originalText}/#{sentencesOriginalText}",chomp: true)
+arraySentencesRemoveInt = arraySentencesOriginal.dup.delete_if {|el| el =~ /\d+/}
+p arraySentencesOriginal
+
 newArraySentences = arraySentencesRemoveInt.dup
                     .join.split('.')
                     .delete_if{|el| el == ''}
 
-File.open("Tri medvede/NewSentences.txt",'w') do |file|
-    file.puts *newArraySentences.map!{|el| el + '.'}
-end
+# File.open("Tri medvede/NewSentences.txt",'w+') do |file|
+#     file.puts *newArraySentences.map!{|el| el + '.'}
+# end
 
 # stringFile = arraySentencesRemoveInt.join
 # stringFile.gsub!(/[:,!.\\=?"()]/,' ')
