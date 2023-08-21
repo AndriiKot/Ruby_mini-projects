@@ -1,4 +1,4 @@
-﻿Dir.new('Tri medvede').Dir.mkdir("NewTEXT")
+﻿Dir.chdir('Tri medvede' ) {| path | Dir.mkdir("NewTEXT") }
 arraySentencesOriginal = File.readlines('Tri medvede/originalText/SentencesORIGINAL.txt',chomp: true)
 arraySentencesRemoveInt = arraySentencesOriginal.dup.delete_if {|el| el =~ /\d+/}
 
