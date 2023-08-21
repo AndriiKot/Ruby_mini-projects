@@ -6,7 +6,9 @@ newArraySentences = arraySentencesRemoveInt.dup
                     .join.split('.')
                     .delete_if{|el| el == ''}
 
-p newArraySentences
+
+newArraySentences.each { |line| puts line}
+gets
 # File.open('NewSentences.txt','w+') do |file|
 #     file.puts *newArraySentences.map!{|el| el + '.' if not el.empty?}
 # end
