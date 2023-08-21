@@ -1,24 +1,11 @@
-﻿entries = Dir.new('originalText')
-entries.each_child {|x| p "Go #{x}",x.class
-File.new(xgi)}
-arraySentencesOriginal = nil
+﻿
+arraySentencesOriginal = File.readlines('originalText/SentencesORIGINAL.txt',chomp: true)
+p arraySentencesOriginal
+arraySentencesRemoveInt = arraySentencesOriginal.dup.delete_if {|el| el =~ /\d+/}
 
-# entries.each do |file|
-#     if file.include? 'SentencesORIGINAL.txt'
-#         p arraySentencesOriginal
-#         # arraySentencesOriginal = File.readlines('SentencesORIGINAL.txt',chomp: true)
-#         p file.class
-#         arraySentencesOriginal = File.readlines(file,chomp: true)
-#         p arraySentencesOriginal
-#         break;
-#     end
-# end
-
-# arraySentencesRemoveInt = arraySentencesOriginal.dup.delete_if {|el| el =~ /\d+/}
-
-# newArraySentences = arraySentencesRemoveInt.dup
-#                     .join.split('.')
-#                     .delete_if{|el| el == ''}
+newArraySentences = arraySentencesRemoveInt.dup
+                    .join.split('.')
+                    .delete_if{|el| el == ''}
 
 
 # File.open('NewSentences.txt','w+') do |file|
