@@ -1,13 +1,12 @@
 ﻿
 arraySentencesOriginal = File.readlines('originalText/SentencesORIGINAL.txt',chomp: true)
-p arraySentencesOriginal
 arraySentencesRemoveInt = arraySentencesOriginal.dup.delete_if {|el| el =~ /\d+/}
 
 newArraySentences = arraySentencesRemoveInt.dup
                     .join.split('.')
                     .delete_if{|el| el == ''}
 
-
+p newArraySentences
 # File.open('NewSentences.txt','w+') do |file|
 #     file.puts *newArraySentences.map!{|el| el + '.' if not el.empty?}
 # end
