@@ -12,14 +12,10 @@ arraySentencesRemoveInt = arraySentencesOriginal.dup.delete_if {|el| el =~ /\d+/
 newArraySentences = arraySentencesRemoveInt.dup
                     .join.split('.')
                     .delete_if{|el| el == ''}
-File.open("#{newDir}/DEMO.txt","w+") { |file|
-    file.puts "Hello DEMO!!!"
-    file.puts "HI!!"
-}
 
-# File.open("#{newDir}/#{newTextDir}/#{newSentencesText}",'w+') do |file|
-#     file.puts *newArraySentences.map!{|el| el + '.'}
-# end
+File.open("#{newDir}/#{newTextDir}/#{newSentencesText}","w+") { |file|
+    file.puts *newArraySentences.map!{|el| el + '.'}
+}
 
 # stringFile = arraySentencesRemoveInt.join
 # stringFile.gsub!(/[:,!.\\=?"()]/,' ')
