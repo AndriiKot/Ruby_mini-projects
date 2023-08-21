@@ -1,5 +1,4 @@
 ﻿entries = Dir.open('originalText')
-# entries.include? 'SentencesORIGINAL.txt'
 arraySentencesOriginal = nil
 
 entries.each do |file|
@@ -8,8 +7,6 @@ entries.each do |file|
         break;
     end
 end
-
-p arraySentencesOriginal
 
 arraySentencesRemoveInt = arraySentencesOriginal.dup.delete_if {|el| el =~ /\d+/}
 
