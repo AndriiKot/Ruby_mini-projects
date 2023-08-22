@@ -3,24 +3,17 @@ newDir = ARGV[0] || "New folder"
 folderOriginal = 'OriginalText'
 fileOriginal = 'SentencesORIGINAL'
 folderModification = 'NewText'
-filemModification = 'NewSentences.txt'
+filemModification = 'NewSentences'
 
 
 Dir.mkdir(newDir)
 Dir.chdir(newDir){|path| Dir.mkdir(fileOriginal); Dir.mkdir(folderModification)}
 
+File.open("#{newDir}/#{folderModification}/#{filemModification}.txt", "w+"){ |file|    
+    file.puts "Hello!!!!"
+}
 
-
-# File.open("#{folderOriginal}/#{fileOriginal}.txt", "w+") { |file|
-#     file.puts "Hello!!!"
-# }
-
-
-
-
-
-# Dir.chdir(newDir) {| path | Dir.mkdir(folderOriginal) }
-
+puts "HI!!!"
 # arraySentencesOriginal = File.readlines("#{newDir}/#{originalText}/#{sentencesOriginalText}",chomp: true)
 # arraySentencesRemoveInt = arraySentencesOriginal.dup.delete_if {|el| el =~ /\d+/}
 
