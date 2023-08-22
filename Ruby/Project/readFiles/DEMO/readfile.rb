@@ -2,16 +2,19 @@
 newDir = ARGV[0] || "New folder"
 Dir.mkdir(newDir)
 
-# folderOriginal = 'OriginalText'
-# fileOriginal = 'SentencesORIGINAL'
+a = Dir.chdir(newDir)
+p a
+
+folderOriginal = 'OriginalText'
+fileOriginal = 'SentencesORIGINAL'
 
 
-# Dir.mkdir(folderOriginal)
+Dir.mkdir(folderOriginal)
 
 
-# File.open("#{folderOriginal}/#{fileOriginal}.txt", "w+") { |file|
-#     file.puts "Hello!!!"
-# }
+File.open("#{folderOriginal}/#{fileOriginal}.txt", "w+") { |file|
+    file.puts "Hello!!!"
+}
 
 
 folderModification = 'NewText'
