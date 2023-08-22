@@ -1,24 +1,34 @@
-﻿newDir = 'Tri medvede'
-newTextDir = 'NewText'
-originalText = 'OriginalText'
-sentencesOriginalText = 'SentencesORIGINAL.txt'
-newSentencesText = 'NewSentences.txt'
+﻿# arrayARGV = ARGV
+# newDir = ARGV[0] || "New folder"
 
-array = ARGV
-p array
+folderOriginal = 'OriginalText'
+fileOriginal = 'SentencesORIGINAL.txt'
 
-Dir.chdir(newDir) {| path | Dir.mkdir(newTextDir) }
+Dir.mkdir(fileOriginal)
 
-arraySentencesOriginal = File.readlines("#{newDir}/#{originalText}/#{sentencesOriginalText}",chomp: true)
-arraySentencesRemoveInt = arraySentencesOriginal.dup.delete_if {|el| el =~ /\d+/}
 
-newArraySentences = arraySentencesRemoveInt.dup
-                    .join.split('.')
-                    .delete_if{|el| el == ''}
-
-File.open("#{newDir}/#{newTextDir}/#{newSentencesText}","w+") { |file|
-    file.puts *newArraySentences.map!{|el| el + '.'}
+File.open("#{folderOriginal}/#{fileOriginal}", "w+") { |file|
+    file.puts "Hello!!!"
 }
+
+
+folderModification = 'NewText'
+filemModification = 'NewSentences.txt'
+
+
+
+# Dir.chdir(newDir) {| path | Dir.mkdir(folderOriginal) }
+
+# arraySentencesOriginal = File.readlines("#{newDir}/#{originalText}/#{sentencesOriginalText}",chomp: true)
+# arraySentencesRemoveInt = arraySentencesOriginal.dup.delete_if {|el| el =~ /\d+/}
+
+# newArraySentences = arraySentencesRemoveInt.dup
+#                     .join.split('.')
+#                     .delete_if{|el| el == ''}
+
+# File.open("#{newDir}/#{newTextDir}/#{newSentencesText}","w+") { |file|
+#     file.puts *newArraySentences.map!{|el| el + '.'}
+# }
 
 # stringFile = arraySentencesRemoveInt.join
 # stringFile.gsub!(/[:,!.\\=?"()]/,' ')
