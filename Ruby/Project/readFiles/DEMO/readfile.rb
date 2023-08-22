@@ -1,5 +1,7 @@
 ﻿arrayARGV = ARGV
 newDir = ARGV[0] || "New folder"
+contentText = ARGV[1]
+
 folderOriginal = 'OriginalText'
 fileOriginal = 'SentencesORIGINAL.txt'
 folderModification = 'NewText'
@@ -10,11 +12,11 @@ Dir.mkdir(newDir)
 Dir.chdir(newDir){|path| Dir.mkdir(folderOriginal); Dir.mkdir(folderModification)}
 
 File.open("#{newDir}/#{folderModification}/#{filemModification}", "w+"){ |file|    
-    file.puts "I am Modicitcation files"
+    file.puts "Moditification"
 }
 
 File.open("#{newDir}/#{folderOriginal}/#{fileOriginal}","w+") { |file|
-    file.puts "I am Original File"
+    file.puts contentText
 }
 
 puts "HI!!!"
