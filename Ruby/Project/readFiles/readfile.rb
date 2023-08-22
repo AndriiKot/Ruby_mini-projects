@@ -4,6 +4,9 @@ originalText = 'OriginalText'
 sentencesOriginalText = 'SentencesORIGINAL.txt'
 newSentencesText = 'NewSentences.txt'
 
+array = ARGV
+p array
+
 Dir.chdir(newDir) {| path | Dir.mkdir(newTextDir) }
 
 arraySentencesOriginal = File.readlines("#{newDir}/#{originalText}/#{sentencesOriginalText}",chomp: true)
