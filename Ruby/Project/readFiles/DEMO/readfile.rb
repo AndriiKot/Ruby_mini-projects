@@ -2,23 +2,25 @@
 newDir = ARGV[0] || "New folder"
 Dir.mkdir(newDir)
 
-a = Dir.chdir(newDir)
-p a
-
 folderOriginal = 'OriginalText'
 fileOriginal = 'SentencesORIGINAL'
 
 
-Dir.mkdir(folderOriginal)
+Dir.chdir(newDir){|path| Dir.mkdir(fileOriginal)}
 
 
-File.open("#{folderOriginal}/#{fileOriginal}.txt", "w+") { |file|
-    file.puts "Hello!!!"
-}
 
 
-folderModification = 'NewText'
-filemModification = 'NewSentences.txt'
+# Dir.mkdir(folderOriginal)
+
+
+# File.open("#{folderOriginal}/#{fileOriginal}.txt", "w+") { |file|
+#     file.puts "Hello!!!"
+# }
+
+
+# folderModification = 'NewText'
+# filemModification = 'NewSentences.txt'
 
 
 
