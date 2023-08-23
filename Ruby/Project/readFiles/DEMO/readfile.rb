@@ -16,7 +16,8 @@ Dir.chdir(newDir){|path| Dir.mkdir(folderOriginal); Dir.mkdir(folderModification
 
 File.open(pathOriginalText, "w+"){ |file|    
     str = File.read("demo.txt")
-    p str
+    strcopy =  str.delete "0-9"
+    p strcopy
     # file.puts contentText
 }
 
