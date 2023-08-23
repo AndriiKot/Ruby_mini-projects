@@ -1,5 +1,6 @@
 ﻿arrayARGV = ARGV
 newDir = ARGV[0] || "New folder"
+fileDemoOriginal = 'OriginalText.txt'
 
 folderOriginal = 'OriginalText'
 fileOriginal = 'SentencesORIGINAL.txt'
@@ -15,11 +16,9 @@ Dir.mkdir(newDir)
 Dir.chdir(newDir){|path| Dir.mkdir(folderOriginal); Dir.mkdir(folderModification)}
 
 File.open(pathOriginalText, "w+"){ |file|    
-    str = File.read("demo.txt")
+    str = File.read(fileDemoOriginal)
     strcopy = ''
     str.each_line { |line| strcopy += line unless line =~ /\d+/}
-    p strcopy
-    # file.puts contentText
 }
 
 File.open(pathModificationText,"w+") { |file|
@@ -27,7 +26,7 @@ File.open(pathModificationText,"w+") { |file|
 }
 
 arraySentencesOriginal = File.readlines(pathOriginalText,chomp: true)
-p arraySentencesOriginal 
+
 # arraySentencesRemoveInt = arraySentencesOriginal.dup.delete_if {|el| el =~ /\d+/}
 
 # newArraySentences = arraySentencesRemoveInt.dup
