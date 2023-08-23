@@ -1,31 +1,28 @@
 ﻿arrayARGV = ARGV
 newDir = ARGV[0] || "New folder"
 fileDemoOriginal = 'OriginalText.txt'
+folderUnionWorld = 'Unique Words'
 
-folderOriginal = 'OriginalText'
-fileOriginal = 'SentencesORIGINAL.txt'
-folderModification = 'NewText'
-filemModification = 'NewSentences.txt'
-
-pathOriginalText = "#{newDir}/#{folderOriginal}/#{fileOriginal}"
-pathModificationText = "#{newDir}/#{folderModification}/#{filemModification}"
+fileSentencesUnion = 'NewSentences.txt'
+fileWordsUnion = 'WordsUnique.txt'
+# pathModificationText = "#{newDir}/#{filemModification}"
 
 
 
 Dir.mkdir(newDir)
-Dir.chdir(newDir){|path| Dir.mkdir(folderOriginal); Dir.mkdir(folderModification)}
+Dir.mkdir(folderUnionWorld)
 
-File.open(pathOriginalText, "w+"){ |file|    
-    str = File.read(fileDemoOriginal)
-    strcopy = ''
-    str.each_line { |line| strcopy += line unless line =~ /\d+/}
-}
+# File.open(pathOriginalText, "w+"){ |file|    
+#     str = File.read(fileDemoOriginal)
+#     strcopy = ''
+#     str.each_line { |line| strcopy += line unless line =~ /\d+/}
+# }
 
-File.open(pathModificationText,"w+") { |file|
-    file.puts "HI!!!"
-}
+# File.open(pathModificationText,"w+") { |file|
+#     file.puts "HI!!!"
+# }
 
-arraySentencesOriginal = File.readlines(pathOriginalText,chomp: true)
+# arraySentencesOriginal = File.readlines(pathOriginalText,chomp: true)
 
 # arraySentencesRemoveInt = arraySentencesOriginal.dup.delete_if {|el| el =~ /\d+/}
 
