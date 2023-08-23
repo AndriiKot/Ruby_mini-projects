@@ -1,22 +1,22 @@
 ﻿arrayARGV = ARGV
 newDir = ARGV[0] || "New folder"
 fileDemoOriginal = 'OriginalText.txt'
-folderUnionWorld = 'Unique Words'
-
 fileSentencesUnion = 'NewSentences.txt'
 fileWordsUnion = 'WordsUnique.txt'
-# pathModificationText = "#{newDir}/#{filemModification}"
+folderUnionWorld = 'Unique Words'
 
 
 
 Dir.mkdir(newDir)
 Dir.mkdir(folderUnionWorld)
 
-# File.open(pathOriginalText, "w+"){ |file|    
-#     str = File.read(fileDemoOriginal)
-#     strcopy = ''
-#     str.each_line { |line| strcopy += line unless line =~ /\d+/}
-# }
+File.open("#{newDir}/#{fileSentencesUnion}", "w+"){ |file|    
+    str = File.read(fileDemoOriginal)
+    strcopy = ''
+    str.each_line { |line| strcopy += line unless line =~ /\d+/}
+    str = nil;
+    File.open(fileSentencesUnion,"w+"){ |file| file.puts strcopy}
+}
 
 # File.open(pathModificationText,"w+") { |file|
 #     file.puts "HI!!!"
