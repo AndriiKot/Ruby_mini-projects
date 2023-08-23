@@ -15,9 +15,8 @@ Dir.mkdir(newDir)
 Dir.mkdir(folderUnionWorld)
 
 File.open(pathToSentences, "w+"){ |file|
-       uniqSentences = File.readlines(fileDemoOriginal)
-       p uniqSentences.size
-       p uniqSentences.to_set.size    
+       uniqSentences = File.readlines(fileDemoOriginal).to_set
+       
 }
 
 # File.open(pathToSentences, "w+"){ |file|    
