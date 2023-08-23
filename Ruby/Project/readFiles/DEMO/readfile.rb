@@ -14,10 +14,12 @@ pathToSentences = "#{newDir}/#{fileSentencesUnion}"
 Dir.mkdir(newDir)
 Dir.mkdir(folderUnionWorld)
 
-File.open(pathToSentences, "w+"){ |file|
+File.open(pathToSentences, "w+") do |file|
        uniqSentences = File.readlines(fileDemoOriginal).to_set
-       
-}
+       p uniqSentences.size
+       uniqSentences.delete_if{|element| element if element =~ /\d+/}
+       p uniqSentences.size
+end
 
 # File.open(pathToSentences, "w+"){ |file|    
 #     str = File.read(fileDemoOriginal)
