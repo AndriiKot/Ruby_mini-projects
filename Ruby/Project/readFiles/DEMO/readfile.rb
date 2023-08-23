@@ -7,20 +7,23 @@ fileOriginal = 'SentencesORIGINAL.txt'
 folderModification = 'NewText'
 filemModification = 'NewSentences.txt'
 
+pathOriginalText = "#{newDir}/#{folderModification}/#{filemModification}"
+pathModificationText = "#{newDir}/#{folderOriginal}/#{fileOriginal}"
+
 
 Dir.mkdir(newDir)
 Dir.chdir(newDir){|path| Dir.mkdir(folderOriginal); Dir.mkdir(folderModification)}
 
-File.open("#{newDir}/#{folderModification}/#{filemModification}", "w+"){ |file|    
+File.open(pathOriginalText, "w+"){ |file|    
     file.puts "Moditification"
 }
 
-File.open("#{newDir}/#{folderOriginal}/#{fileOriginal}","w+") { |file|
+File.open(pathModificationText,"w+") { |file|
     file.puts contentText
 }
 
-puts "HI!!!"
-# arraySentencesOriginal = File.readlines("#{newDir}/#{originalText}/#{sentencesOriginalText}",chomp: true)
+arraySentencesOriginal = File.readlines(pathOriginalText,chomp: true)
+p arraySentencesOriginal
 # arraySentencesRemoveInt = arraySentencesOriginal.dup.delete_if {|el| el =~ /\d+/}
 
 # newArraySentences = arraySentencesRemoveInt.dup
