@@ -15,9 +15,12 @@ Dir.mkdir(folderUnionWorld)
 File.open(pathToSentences, "w+"){ |file|    
     str = File.read(fileDemoOriginal)
     strcopy = ''
-    str.each_line { |line| strcopy += line unless line =~ /\d+/}
+    str.each_line do |line| 
+        strcopy += line =~ /\d+/ ? '' : line
+    end
     str = nil;
-    file.puts strcopy
+    strcopy = strcopy.split('.')
+    p strcopy.class
 }
 
 # File.open(pathModificationText,"w+") { |file|
