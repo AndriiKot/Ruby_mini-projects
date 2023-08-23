@@ -16,9 +16,7 @@ Dir.mkdir(folderUnionWorld)
 
 File.open(pathToSentences, "w+") do |file|
        uniqSentences = File.readlines(fileDemoOriginal).to_set
-       p uniqSentences.size
-       uniqSentences.delete_if{|element| element if element =~ /\d+/}
-       p uniqSentences.size
+       uniqSentences.delete_if{|element| element =~ /\d+/ ? element : file.puts(element)}
 end
 
 # File.open(pathToSentences, "w+"){ |file|    
