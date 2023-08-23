@@ -1,4 +1,6 @@
-﻿arrayARGV = ARGV
+﻿require 'set'
+
+arrayARGV = ARGV
 newDir = ARGV[0] || "New folder"
 fileDemoOriginal = 'OriginalText.txt'
 fileSentencesUnion = 'NewSentences.txt'
@@ -12,16 +14,31 @@ pathToSentences = "#{newDir}/#{fileSentencesUnion}"
 Dir.mkdir(newDir)
 Dir.mkdir(folderUnionWorld)
 
-File.open(pathToSentences, "w+"){ |file|    
-    str = File.read(fileDemoOriginal)
-    strcopy = ''
-    str.each_line do |line| 
-        strcopy += line =~ /\d+/ ? '' : line
-    end
-    str = nil;
-    strcopy = strcopy.split('.')
-    p strcopy.class
+File.open(pathToSentences, "w+"){ |file|
+       uniqSentences = File.readlines(fileDemoOriginal)
+       p uniqSentences.size
+       p uniqSentences.to_set.size    
 }
+
+# File.open(pathToSentences, "w+"){ |file|    
+#     str = File.read(fileDemoOriginal)
+#     moditification_str = ''
+#     str.each_line do |line| 
+#         moditification_str += line =~ /\d+/ ? '' : line
+#     end
+#     str = nil;
+#     uniqSentences = Set[]
+#     moditification_str.split('.').delete_if {|element|
+#              if element == '' then element
+#              else uniqSentences.add(element)
+#              end
+#             }
+#     p uniqSentences
+#     file.puts uniqSentences.join('.')
+#     # file.puts moditification_str
+#     # p moditification_str.class
+#     # file.puts (moditification_str.join('.'))
+# }
 
 # File.open(pathModificationText,"w+") { |file|
 #     file.puts "HI!!!"
