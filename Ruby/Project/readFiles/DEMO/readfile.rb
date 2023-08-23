@@ -15,8 +15,8 @@ Dir.mkdir(newDir)
 Dir.chdir(newDir){|path| Dir.mkdir(folderOriginal); Dir.mkdir(folderModification)}
 
 File.open(pathOriginalText, "w+"){ |file|    
-    a = File.readlines("demo.txt")
-    p a;
+    str = File.read("demo.txt")
+    p str
     # file.puts contentText
 }
 
