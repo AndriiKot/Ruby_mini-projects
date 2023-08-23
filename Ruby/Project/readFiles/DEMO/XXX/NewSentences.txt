@@ -1,1 +1,208 @@
-#<Set: {"Ahojte", "\nDnes vám poviem rozprávku", "\nRozprávka sa volá tri medvede", "\nToto sú tri medvede", "\nJeden,\ndva,\ntri", "\nTento medveď je veľký", "\nTento medveď nie je veľký, nie je malý,\nje normálny", "\nJe stredný", "\nStredný = nie je veľký, nie je malý", "\nNapíšem", "\nVeľký medveď,\nstredný medveď,\na malý medveď", "\nTento medveď je malý", "\nVeľký medveď je otec", "\nStredný medveď je mama,\na malý medveď je syn", "\nJe to rodina", "\nRodina medveďov", "\nToto sú tri medvede\na toto", "\ntoto je dievča", "\nDievča sa volá Janka", "\nJanka je v lese", "\nToto je les\na Janka je v lese", "\nV lese je dom", "\nVeľký dom", "\nToto je veľký dom", "\nJanka vidí veľký dom\na ide k domu", "\nV dome bývajú tri medvede,\nale teraz, momentálne, medvede nie sú doma", "\nale teraz, momentálne, medvede nie sú doma", "\nSú v lese", "\nJanka nevie, kto býva v dome", "\nNevie, že tam bývajú medvede", "\nTak Janka ide do domu", "\nJanka je v dome\na v dome je stôl", "\nToto je stôl", "\nA Janka vidí na stole tri misky", "\nToto sú tri misky", "\nV miskách je kaša", "\nMiska; a dnu, v miske, je kaša", "\nJanka je trochu hladná", "\nChce jesť", "\nJanka vidí misky, vidí kašu\nJanka vidí misky, vidí kašu\na myslí si:\n\"Ó, mňam, dobrá kaša!\nChcem jesť", "\"\nTak Janka vidí veľkú misku", "\nlebo tie tri misky -\njedna je veľká,\njedna je stredná\na jedna je malá", "\nJanka vidí veľkú misku,\nberie veľkú misku\na je kašu z veľkej misky", "\nJe trochu kaše z veľkej misky", "\nKaša je horúca", "\nHorúca = veľmi teplá", "\nTak, nebola dobrá", "\nTak Janka berie druhú misku, strednú misku\nTak Janka berie druhú misku, strednú misku\nTak Janka berie druhú misku, strednú misku\na je trochu kaše zo strednej misky", "\na je trochu kaše zo strednej misky", "\nKaša zo strednej misky nebola horúca,\nKaša zo strednej misky nebola horúca,\nbola studená", "\nTak, nie je dobrá pre Janku", "\nJanka potom berie tretiu misku,\nje trochu kaše\na kaša z malej misky je perfektná", "\nNie je horúca,\nnie je studená,\nje totálne perfektná", "\nVeľmi dobrá", "\nJanka zje všetku kašu", "\nV miske už nie je kaša, v miske už nie je nič,\nlebo Janka zje všetko", "\nlebo Janka zje všetko", "\nJedna stolička je veľká,\njedna stolička je stredná\na jedna stolička je malá", "\nJanka vidí veľkú stoličku", "\nA sadne si na veľkú stoličku", "\nSadne si", "\nJanka sedí na veľkej stoličke,\nale tá stolička je veľmi tvrdá", "\nJanka tam nechce sedieť", "\nTak Janka ide na strednú stoličku", "\nAle stredná stolička nie je tvrdá,\nale je veľmi mäkká", "\nJanka nechce sedieť na mäkkej stoličke", "\nTak Janka si sadne na malú stoličku", "\nTá malá stolička je totálne perfektná", "\nNie je veľmi tvrdá, nie je veľmi mäkká,\nje to super stolička", "\nAle Janka sedí na stoličke\na stolička sa zlomí", "\nTak, potom", "\nV dome sú dve izby:\nJedna izba je kuchyňa", "\nV kuchyni ľudia (alebo medvede) jedia", "\nA druhá izba je spálňa", "\nV spálni ľudia (alebo medvede) spia", "\nToto je spálňa", " Hore", "\nA v spálni sú postele", "\nV spálni sú tri postele:\njedna veľká,\njedna stredná posteľ\na jedna malá posteľ", "\nJanka ide hore a vidí veľkú posteľ", "\nJanka si ľahne\nJanka si ľahne do veľkej postele", "\nJanka si ľahne do veľkej postele", "\nAle veľká posteľ je veľmi tvrdá", "\nVeľmi, veľmi tvrdá", "\nJanka nechce ležať v tvrdej posteli", "\nTak Janka ide k strednej posteli", "\nA ľahne si do strednej postele", "\nAle stredná posteľ je veľmi mäkká", "\nJanka nechce ležať v mäkkej posteli", "\nAle v dome je ešte malá posteľ", "\nTak Janka ide k malej posteli\na ľahne si do malej postele", "\nJanka leží v malej posteli\na malá posteľ nie je tvrdá, nie je mäkká,\nje perfektná", "\nA Janka spí", "\nMedvede boli v lese,\nale teraz medvede idú domov", "\nMedvede sú doma\na vidia tri misky na stole", "\nChcú jesť", "\nVeľký medveď (otec) vidí svoju veľkú misku", "\nAle vidí že niekto jedol trochu kaše z jeho misky", "\nA hovorí:\n\"Niekto jedol kašu z mojej misky!\nKto? Kto to bol?\"\nNevie", "\nPotom stredný medveď (mama) vidí svoju strednú misku", "\nA vidí, že niekto (Janka) jedol", "\nže niekto jedol z jej misky", "\nA hovorí:\n\"Čo?\nNiekto jedol z moje misky!\"\nA malý medveď vidí svoju malú misku\nA vidí, že v miske nič nie je", "\nNie je tam kaša", "\nNie je tam nič", "\nA syn hovorí:\n\"Niekto jedol z mojej misky\na zjedol všetko!\"\nPotom medvede vidia tri stoličky", "\nPotom medvede vidia tri stoličky", "\nOtec (veľký medveď) vidí veľkú stoličku", "\nA hovorí:\n\"Niekto sedel na mojej stoličke!\"\nMama (stredný medveď) vidí svoju strednú stoličku\na hovorí:\n\"Niekto sedel na mojej stoličke!\"\n\"Niekto sedel na mojej stoličke!\"\nA potom malý medveď\nvidí svoju malú stoličku\nvidí svoju malú stoličku\na hovorí:\n\"Niekto sedel na mojej stoličke\na moja stolička je zlomená!\"\nPotom tri medvede idú hore do spálne", "\nVidia tri postele", "\nVeľký medveď vidí svoju veľkú posteľ\nVeľký medveď vidí svoju veľkú posteľ\na hovorí:\n\"Niekto spal v mojej posteli!\"\n\"Niekto spal v mojej posteli!\"\nMama (stredný medveď) vidí svoju strednú posteľ\na hovorí:\n\"Niekto spal v mojej posteli!\"\nA malý medveď vidí svoju malú posteľ\nA malý medveď vidí svoju malú posteľ\na vidí dievča", "\nV jeho posteli je dievča", "\nMalý medveď hovorí:\n\"Niekto leží teraz (v tomto momente) v mojej posteli!\nNiekto leží v mojej posteli a spí", "\"\nJanka otvorí oči,\nuž nespí\na vidí tri medvede", "\nJanka je v šoku", "\nJanka vyskočí z postele\na beží,\nbeží dolu,\nbeží von z domu,\nbeží do lesa,\nbeží, beží", "\nA toto je Jankin dom", "\nJanka má malý dom", "\nA Janka beží, beží, beží domov", "\nA to je koniec", "\nČaute", "\n\n"}>
+Ahojte.
+Dnes vám poviem rozprávku.
+Rozprávka sa volá tri medvede.
+Toto sú tri medvede.
+Jeden,
+dva,
+tri.
+Tento medveď je veľký.
+Tento medveď nie je veľký, nie je malý,
+je normálny.
+Je stredný.
+Stredný = nie je veľký, nie je malý.
+Napíšem.
+Veľký medveď,
+stredný medveď,
+a malý medveď.
+Tento medveď je malý.
+Veľký medveď je otec.
+Stredný medveď je mama,
+a malý medveď je syn.
+Je to rodina.
+Rodina medveďov.
+Toto sú tri medvede
+a toto.
+toto je dievča.
+Dievča sa volá Janka.
+Janka je v lese.
+Toto je les
+a Janka je v lese.
+V lese je dom.
+Veľký dom.
+Toto je veľký dom.
+Janka vidí veľký dom
+a ide k domu.
+V dome bývajú tri medvede,
+ale teraz, momentálne, medvede nie sú doma.
+ale teraz, momentálne, medvede nie sú doma.
+Sú v lese.
+Janka nevie, kto býva v dome.
+Nevie, že tam bývajú medvede.
+Tak Janka ide do domu.
+Janka je v dome
+a v dome je stôl.
+Toto je stôl.
+A Janka vidí na stole tri misky.
+Toto sú tri misky.
+V miskách je kaša.
+Miska; a dnu, v miske, je kaša.
+Janka je trochu hladná.
+Chce jesť.
+Janka vidí misky, vidí kašu
+Janka vidí misky, vidí kašu
+a myslí si:
+"Ó, mňam, dobrá kaša!
+Chcem jesť."
+Tak Janka vidí veľkú misku.
+lebo tie tri misky -
+jedna je veľká,
+jedna je stredná
+a jedna je malá.
+Janka vidí veľkú misku,
+berie veľkú misku
+a je kašu z veľkej misky.
+Je trochu kaše z veľkej misky.
+Kaša je horúca.
+Horúca = veľmi teplá.
+Tak, nebola dobrá.
+Tak Janka berie druhú misku, strednú misku
+Tak Janka berie druhú misku, strednú misku
+Tak Janka berie druhú misku, strednú misku
+a je trochu kaše zo strednej misky.
+a je trochu kaše zo strednej misky.
+Kaša zo strednej misky nebola horúca,
+Kaša zo strednej misky nebola horúca,
+bola studená.
+Tak, nie je dobrá pre Janku.
+Janka potom berie tretiu misku,
+je trochu kaše
+a kaša z malej misky je perfektná.
+Nie je horúca,
+nie je studená,
+je totálne perfektná.
+Veľmi dobrá.
+Janka zje všetku kašu.
+V miske už nie je kaša, v miske už nie je nič,
+lebo Janka zje všetko.
+lebo Janka zje všetko.
+Jedna stolička je veľká,
+jedna stolička je stredná
+a jedna stolička je malá.
+Janka vidí veľkú stoličku.
+A sadne si na veľkú stoličku.
+Sadne si.
+Janka sedí na veľkej stoličke,
+ale tá stolička je veľmi tvrdá.
+Janka tam nechce sedieť.
+Tak Janka ide na strednú stoličku.
+Ale stredná stolička nie je tvrdá,
+ale je veľmi mäkká.
+Janka nechce sedieť na mäkkej stoličke.
+Tak Janka si sadne na malú stoličku.
+Tá malá stolička je totálne perfektná.
+Nie je veľmi tvrdá, nie je veľmi mäkká,
+je to super stolička.
+Ale Janka sedí na stoličke
+a stolička sa zlomí.
+Tak, potom.
+V dome sú dve izby:
+Jedna izba je kuchyňa.
+V kuchyni ľudia (alebo medvede) jedia.
+A druhá izba je spálňa.
+V spálni ľudia (alebo medvede) spia.
+Toto je spálňa. Hore.
+A v spálni sú postele.
+V spálni sú tri postele:
+jedna veľká,
+jedna stredná posteľ
+a jedna malá posteľ.
+Janka ide hore a vidí veľkú posteľ.
+Janka si ľahne
+Janka si ľahne do veľkej postele.
+Janka si ľahne do veľkej postele.
+Ale veľká posteľ je veľmi tvrdá.
+Veľmi, veľmi tvrdá.
+Janka nechce ležať v tvrdej posteli.
+Tak Janka ide k strednej posteli.
+A ľahne si do strednej postele.
+Ale stredná posteľ je veľmi mäkká.
+Janka nechce ležať v mäkkej posteli.
+Ale v dome je ešte malá posteľ.
+Tak Janka ide k malej posteli
+a ľahne si do malej postele.
+Janka leží v malej posteli
+a malá posteľ nie je tvrdá, nie je mäkká,
+je perfektná.
+A Janka spí.
+Medvede boli v lese,
+ale teraz medvede idú domov.
+Medvede sú doma
+a vidia tri misky na stole.
+Chcú jesť.
+Veľký medveď (otec) vidí svoju veľkú misku.
+Ale vidí že niekto jedol trochu kaše z jeho misky.
+A hovorí:
+"Niekto jedol kašu z mojej misky!
+Kto? Kto to bol?"
+Nevie.
+Potom stredný medveď (mama) vidí svoju strednú misku.
+A vidí, že niekto (Janka) jedol.
+že niekto jedol z jej misky.
+A hovorí:
+"Čo?
+Niekto jedol z moje misky!"
+A malý medveď vidí svoju malú misku
+A vidí, že v miske nič nie je.
+Nie je tam kaša.
+Nie je tam nič.
+A syn hovorí:
+"Niekto jedol z mojej misky
+a zjedol všetko!"
+Potom medvede vidia tri stoličky.
+Potom medvede vidia tri stoličky.
+Otec (veľký medveď) vidí veľkú stoličku.
+A hovorí:
+"Niekto sedel na mojej stoličke!"
+Mama (stredný medveď) vidí svoju strednú stoličku
+a hovorí:
+"Niekto sedel na mojej stoličke!"
+"Niekto sedel na mojej stoličke!"
+A potom malý medveď
+vidí svoju malú stoličku
+vidí svoju malú stoličku
+a hovorí:
+"Niekto sedel na mojej stoličke
+a moja stolička je zlomená!"
+Potom tri medvede idú hore do spálne.
+Vidia tri postele.
+Veľký medveď vidí svoju veľkú posteľ
+Veľký medveď vidí svoju veľkú posteľ
+a hovorí:
+"Niekto spal v mojej posteli!"
+"Niekto spal v mojej posteli!"
+Mama (stredný medveď) vidí svoju strednú posteľ
+a hovorí:
+"Niekto spal v mojej posteli!"
+A malý medveď vidí svoju malú posteľ
+A malý medveď vidí svoju malú posteľ
+a vidí dievča.
+V jeho posteli je dievča.
+Malý medveď hovorí:
+"Niekto leží teraz (v tomto momente) v mojej posteli!
+Niekto leží v mojej posteli a spí."
+Janka otvorí oči,
+už nespí
+a vidí tri medvede.
+Janka je v šoku.
+Janka vyskočí z postele
+a beží,
+beží dolu,
+beží von z domu,
+beží do lesa,
+beží, beží.
+A toto je Jankin dom.
+Janka má malý dom.
+A Janka beží, beží, beží domov.
+A to je koniec.
+Čaute.
+
