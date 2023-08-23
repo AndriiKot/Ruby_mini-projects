@@ -5,17 +5,19 @@ fileSentencesUnion = 'NewSentences.txt'
 fileWordsUnion = 'WordsUnique.txt'
 folderUnionWorld = 'Unique Words'
 
+pathToSentences = "#{newDir}/#{fileSentencesUnion}"
+
 
 
 Dir.mkdir(newDir)
 Dir.mkdir(folderUnionWorld)
 
-File.open("#{newDir}/#{fileSentencesUnion}", "w+"){ |file|    
+File.open(pathToSentences, "w+"){ |file|    
     str = File.read(fileDemoOriginal)
     strcopy = ''
     str.each_line { |line| strcopy += line unless line =~ /\d+/}
     str = nil;
-    File.open(fileSentencesUnion,"w+"){ |file| file.puts strcopy}
+    file.puts strcopy
 }
 
 # File.open(pathModificationText,"w+") { |file|
