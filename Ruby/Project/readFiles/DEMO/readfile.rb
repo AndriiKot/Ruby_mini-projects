@@ -1,41 +1,51 @@
 ﻿require 'set'
 
 arrayARGV = ARGV
-newDir = ARGV[0] || "New folder"
-fileDemoOriginal = 'OriginalText.txt'
-fileSentencesUnion = 'NewSentences.txt'
-fileWordsUnion = 'WordsUnique.txt'
-folderUnionWorld = 'Unique Words'
 
-pathToSentences = "#{newDir}/#{fileSentencesUnion}"
+folderFairyTales = "Rozprávky"
+folderNewFairyTale = ARGV[0] || "Nová rozprávka 1"
 
 
-Dir.mkdir(newDir) unless Dir.exist?(newDir)
-Dir.mkdir(folderUnionWorld) unless Dir.exist?(folderUnionWorld)
-
-File.open(pathToSentences, "w+") do |file|
-       uniqSentences = File.readlines(fileDemoOriginal).to_set
-       uniqSentences.delete_if{|element| element =~ /\d+/ ? element : file.puts(element)}
+Dir.mkdir(folderFairyTales) unless Dir.exist?(folderFairyTales)
+Dir.open(folderFairyTales) do |aDir|
+       Dir.mkdir(folderNewFairyTale) unless Dir.exist?(folderNewFairyTale)
 end
 
-setUnionWorlds = Set[];
 
-def unionWorlds(name_file,set)
-       File.open(name_file,"a+"){ |file| 
-       array = file.readlines
-       array.map! { |line| set.add(line.delete!(",.!?\n\"").split(' '))}
-}
-end
+# fileDemoOriginal = 'OriginalText.txt'
+# fileSentencesUnion = 'NewSentences.txt'
+# fileWordsUnion = 'WordsUnique.txt'
+# folderUnionWorld = 'Unique Words'
 
-if File.exist?(pathToSentences)
-       File.open("#{folderUnionWorld}/#{folderUnionWorld}.txt", "w+") do |file|
-             file.puts "Hello New File! "
-             unionWorlds(pathToSentences,setUnionWorlds)
-             p setUnionWorlds
-       end 
-else
-       p "NO"
-end
+# pathToSentences = "#{folderNewFairyTale}/#{fileSentencesUnion}"
+
+
+# Dir.mkdir(folderUnionWorld) unless Dir.exist?(folderUnionWorld)
+
+# File.open(pathToSentences, "w+") do |file|
+#        uniqSentences = File.readlines(fileDemoOriginal).to_set
+#        uniqSentences.delete_if{|element| element =~ /\d+/ ? element : file.puts(element)}
+# end
+
+# setUnionWorlds = Set[];
+
+# def unionWorlds(name_file,set)
+#        File.open(name_file,"a+"){ |file| 
+#        array = file.readlines
+#        array.each do |line| 
+#               arraySentence = line.delete!(",.!?\n\"").split(' ')
+#               arraySentence.each {|world| set.add(world)}
+#        end
+# }
+# end
+
+# if File.exist?(pathToSentences)
+#        File.open("#{folderUnionWorld}/#{folderUnionWorld}.txt", "a+") do |file|
+#              unionWorlds(pathToSentences,setUnionWorlds)
+#        end 
+# else
+#        p "NO"
+# end
 
 
 
