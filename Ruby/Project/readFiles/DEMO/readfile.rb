@@ -18,9 +18,14 @@ File.open(pathToSentences, "w+") do |file|
        uniqSentences.delete_if{|element| element =~ /\d+/ ? element : file.puts(element)}
 end
 
+def unionWorlds(name_file)
+       File.open(name_file,"a+"){|file| p file.readlines.size}
+end
+
 if File.exist?(pathToSentences)
        File.open("#{folderUnionWorld}/#{folderUnionWorld}.txt", "w+") do |file|
-             file.puts "Hello New File!" 
+             file.puts "Hello New File! "
+             unionWorlds(pathToSentences)
        end 
 else
        p "NO"
