@@ -16,6 +16,12 @@ Dir.open(folderFairyTales) do
   regex = Regexp.new("#{defaultNameFairyTales} \\d+")
   arrayDefalutNames = Dir.entries('.').select { |name| name.match?(regex)}
   p arrayDefalutNames.max {|a, b| a.size <=> b.size}.succ
+  p arrayDefalutNames[1]
+  #Dir.rename(arrayDefalutNames[1],'New Name Folder')
+  #exe "rename #{arrayDefalutNames[1]} 'FFFFFF'"
+  system 'echo','Hello!'
+  system 'rename',arrayDefalutNames[1],'FFFFF'
+  p arrayDefalutNames[1]
   
 
 #   if  folderNewFairyTale == defaultNameFairyTales
