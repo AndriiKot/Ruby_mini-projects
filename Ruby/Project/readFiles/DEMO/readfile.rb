@@ -19,7 +19,9 @@ File.open(pathToSentences, "w+") do |file|
 end
 
 if File.exist?(pathToSentences)
-       p "Yes" 
+       File.open("#{folderUnionWorld}/#{folderUnionWorld}.txt", "w+") do |file|
+             file.puts "Hello New File!" 
+       end 
 else
        p "NO"
 end
