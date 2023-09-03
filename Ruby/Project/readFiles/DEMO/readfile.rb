@@ -12,10 +12,19 @@ folderNewFairyTale = ARGV[0] || defaultNameFairyTales
 Dir.mkdir(folderFairyTales) unless Dir.exist?(folderFairyTales)
 Dir.open(folderFairyTales) do 
   Dir.chdir(folderFairyTales)
-  if  folderNewFairyTale == defaultNameFairyTales
-       Dir.mkdir("#{folderNewFairyTale} #{numbeFairyTale}")
-  end
+  Dir.mkdir("#{folderNewFairyTale} #{numbeFairyTale}")
+  array = Dir.entries('.')
+  p array
+
+#   array = Dir.entries(folderFairyTales)
+#   p array
+#   if  folderNewFairyTale == defaultNameFairyTales
+#        Dir.mkdir("#{folderNewFairyTale} #{numbeFairyTale}")
+#        numbeFairyTale += 1;
+#   end
 end
+
+
 
 
 # fileDemoOriginal = 'OriginalText.txt'
