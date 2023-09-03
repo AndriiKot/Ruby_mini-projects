@@ -13,11 +13,10 @@ Dir.mkdir(folderFairyTales) unless Dir.exist?(folderFairyTales)
 Dir.open(folderFairyTales) do 
   Dir.chdir(folderFairyTales)
   Dir.mkdir("#{folderNewFairyTale} #{numbeFairyTale}")
-  array = Dir.entries('.')
-  p array
+  arrayDefalutNames = Dir.entries('.').select { |name| name.match?(defaultNameFairyTales)}
+  p arrayDefalutNames
+  
 
-#   array = Dir.entries(folderFairyTales)
-#   p array
 #   if  folderNewFairyTale == defaultNameFairyTales
 #        Dir.mkdir("#{folderNewFairyTale} #{numbeFairyTale}")
 #        numbeFairyTale += 1;
