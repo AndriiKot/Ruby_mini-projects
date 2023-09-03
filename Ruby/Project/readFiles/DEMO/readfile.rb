@@ -21,7 +21,8 @@ end
 def unionWorlds(name_file)
        File.open(name_file,"a+"){ |file| 
        array = file.readlines
-       array.map! { |line|  p line; sleep 0.5}
+       array.map! { |line|  line.chomp!.split(' ') }
+       p array
 }
 
 end
