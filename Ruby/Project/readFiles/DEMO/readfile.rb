@@ -2,14 +2,19 @@
 
 arrayARGV = ARGV
 
+numbeFairyTale = numbeFairyTale || 1
+defaultNameFairyTales = "Nová rozprávka"
+
 folderFairyTales = "Rozprávky"
-folderNewFairyTale = ARGV[0] || "Nová rozprávka 1"
+folderNewFairyTale = ARGV[0] || defaultNameFairyTales
 
 
 Dir.mkdir(folderFairyTales) unless Dir.exist?(folderFairyTales)
 Dir.open(folderFairyTales) do 
-       Dir.chdir(folderFairyTales)
-       Dir.mkdir(folderNewFairyTale)
+  Dir.chdir(folderFairyTales)
+  if  folderNewFairyTale == defaultNameFairyTales
+       Dir.mkdir("#{folderNewFairyTale} #{numbeFairyTale}")
+  end
 end
 
 
