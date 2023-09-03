@@ -14,9 +14,7 @@ Dir.open(folderFairyTales) do
   Dir.chdir(folderFairyTales)
   Dir.mkdir("#{folderNewFairyTale} #{numbeFairyTale}")
   regex = Regexp.new("#{defaultNameFairyTales} \\d+")
-  p regex
   arrayDefalutNames = Dir.entries('.').select { |name| name.match?(regex)}
-  p arrayDefalutNames
   p arrayDefalutNames.max {|a, b| a.size <=> b.size}.succ
   
 
