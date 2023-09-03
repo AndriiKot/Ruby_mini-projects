@@ -19,7 +19,10 @@ File.open(pathToSentences, "w+") do |file|
 end
 
 def unionWorlds(name_file)
-       File.open(name_file,"a+"){|file| p file.readlines.size}
+       File.open(name_file,"a+"){|file| p file.readlines.size; 
+       file.rewind;
+       p file.readlines.to_set.size
+}
 end
 
 if File.exist?(pathToSentences)
