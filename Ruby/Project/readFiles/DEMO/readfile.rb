@@ -7,8 +7,9 @@ folderNewFairyTale = ARGV[0] || "Nová rozprávka 1"
 
 
 Dir.mkdir(folderFairyTales) unless Dir.exist?(folderFairyTales)
-Dir.open(folderFairyTales) do |aDir|
-       Dir.mkdir(folderNewFairyTale) unless Dir.exist?(folderNewFairyTale)
+Dir.open(folderFairyTales) do 
+       Dir.chdir(folderFairyTales)
+       Dir.mkdir(folderNewFairyTale)
 end
 
 
