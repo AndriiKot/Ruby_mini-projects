@@ -15,14 +15,19 @@ Dir.open(folderFairyTales) do
   Dir.mkdir("#{folderNewFairyTale} #{numbeFairyTale}")
   regex = Regexp.new("#{defaultNameFairyTales} \\d+")
   arrayDefalutNames = Dir.entries('.').select { |name| name.match?(regex)}
-  p arrayDefalutNames.max {|a, b| a.size <=> b.size}.succ
-  p arrayDefalutNames[1]
+  #p arrayDefalutNames.max {|a, b| a.size <=> b.size}.succ
   #Dir.rename(arrayDefalutNames[1],'New Name Folder')
   #exe "rename #{arrayDefalutNames[1]} 'FFFFFF'"
-  system 'echo','Hello!'
-  system 'rename',arrayDefalutNames[1],'FFFFF'
-  p arrayDefalutNames[1]
-  
+  #system 'echo','Hello!'
+  #system 'rename',arrayDefalutNames[1],'FFFFF'
+
+arrayDefalutNames.sort! do |folder,other_folder| 
+       folder.match(/\d+/).to_s.to_i <=> other_folder.match(/\d+/).to_s.to_i
+end
+
+arrayDefalutNames.each.with_index do |folder,i|
+     p folder,i  
+end
 
 #   if  folderNewFairyTale == defaultNameFairyTales
 #        Dir.mkdir("#{folderNewFairyTale} #{numbeFairyTale}")
