@@ -10,9 +10,8 @@ folderUnionWorld = 'Unique Words'
 pathToSentences = "#{newDir}/#{fileSentencesUnion}"
 
 
-
-Dir.mkdir(newDir)
-Dir.mkdir(folderUnionWorld)
+Dir.mkdir(newDir) if Dir.exist?(newDir)
+Dir.mkdir(folderUnionWorld) if Dir.exist?(folderUnionWorld)
 
 File.open(pathToSentences, "w+") do |file|
        uniqSentences = File.readlines(fileDemoOriginal).to_set
