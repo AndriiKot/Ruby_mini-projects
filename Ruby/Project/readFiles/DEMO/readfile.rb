@@ -17,7 +17,7 @@ Dir.open(folderFairyTales) do
   p regex
   arrayDefalutNames = Dir.entries('.').select { |name| name.match?(regex)}
   p arrayDefalutNames
-  p arrayDefalutNames.max {|a, b| a.size <=> b.size}
+  p arrayDefalutNames.max {|a, b| a.size <=> b.size}.succ
   
 
 #   if  folderNewFairyTale == defaultNameFairyTales
