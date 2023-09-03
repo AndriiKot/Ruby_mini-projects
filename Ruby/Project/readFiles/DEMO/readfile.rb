@@ -18,19 +18,20 @@ File.open(pathToSentences, "w+") do |file|
        uniqSentences.delete_if{|element| element =~ /\d+/ ? element : file.puts(element)}
 end
 
-def unionWorlds(name_file)
+setUnionWorlds = Set[];
+
+def unionWorlds(name_file,set)
        File.open(name_file,"a+"){ |file| 
        array = file.readlines
-       array.map! { |line|  line.chomp!.split(' ') }
-       p array
+       array.map! { |line| set.add(line.delete!(",.!?\n\"").split(' '))}
 }
-
 end
 
 if File.exist?(pathToSentences)
        File.open("#{folderUnionWorld}/#{folderUnionWorld}.txt", "w+") do |file|
              file.puts "Hello New File! "
-             unionWorlds(pathToSentences)
+             unionWorlds(pathToSentences,setUnionWorlds)
+             p setUnionWorlds
        end 
 else
        p "NO"
