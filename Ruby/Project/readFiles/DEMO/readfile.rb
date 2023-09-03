@@ -18,6 +18,14 @@ File.open(pathToSentences, "w+") do |file|
        uniqSentences.delete_if{|element| element =~ /\d+/ ? element : file.puts(element)}
 end
 
+if File.exist?(pathToSentences)
+       p "Yes" 
+else
+       p "NO"
+end
+
+
+
 # File.open(pathToSentences, "w+"){ |file|    
 #     str = File.read(fileDemoOriginal)
 #     moditification_str = ''
