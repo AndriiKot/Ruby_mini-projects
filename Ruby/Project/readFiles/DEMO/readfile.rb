@@ -26,12 +26,11 @@ Dir.open(folderFairyTales) do
     system 'rename',folder,newName
     arrayDefalutNames[i] = newName
   end
-p arrayDefalutNames
+
 
    if  folderNewFairyTale == defaultNameFairyTales 
-        #newCreateFolder = arrayDefalutNames[-1]
-       #  p arrayDefalutNames[1]
-       # Dir.mkdir("#{} XX")
+       newCreateFolder = arrayDefalutNames[-1]
+       Dir.mkdir("#{newCreateFolder.succ}")
    end
 end
 
