@@ -28,9 +28,8 @@ Dir.open(folderFairyTales) do
   end
 
   loop do
-   @unionName = @unionName || 'default Value'
    @newName = @newName || 'default Value'
-   p @newName
+   
 
 
    if  folderNewFairyTale == defaultNameFairyTales || @newName == ''
@@ -40,13 +39,19 @@ Dir.open(folderFairyTales) do
 
 
    if  Dir.entries('.').include? folderNewFairyTale
+      p Dir.entries('.')
+      p Dir.entries('.').include? folderNewFairyTale
       puts "#{folderNewFairyTale} уже существует!"
       print "В ведеите новое имя: "
       @newName = $stdin.gets.strip!
-   else
-      @unionName = true
+      folderNewFairyTale = @newName
+      next
    end
+
+     p "Exit"
+     
      #break Dir.mkdir(@newName) if @unionName
+     $stdin.gets.strip!
   end
 
   
