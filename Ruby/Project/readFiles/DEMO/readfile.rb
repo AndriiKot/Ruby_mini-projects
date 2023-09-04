@@ -28,10 +28,7 @@ Dir.open(folderFairyTales) do
   end
 
   loop do
-   @newName = @newName || 'default Value'
    
-
-
    if  folderNewFairyTale == defaultNameFairyTales || folderNewFairyTale == ''
        newCreateFolder = arrayDefalutNames[-1]
        break Dir.mkdir("#{newCreateFolder.succ}")
@@ -43,15 +40,12 @@ Dir.open(folderFairyTales) do
       p Dir.entries('.').include? folderNewFairyTale
       puts "#{folderNewFairyTale} уже существует!"
       print "В ведеите новое имя: "
-      @newName = $stdin.gets.strip!
-      folderNewFairyTale = @newName
+      folderNewFairyTale = $stdin.gets.strip!
       next
    end
 
-     p "Exit"
-     
-     #break Dir.mkdir(@newName) if @unionName
-     $stdin.gets.strip!
+     p "Exit" 
+     break Dir.mkdir(folderNewFairyTale) 
   end
 
   
