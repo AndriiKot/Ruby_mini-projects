@@ -2,7 +2,7 @@
 
 arrayARGV = ARGV
 
-numbeFairyTale = numbeFairyTale || 1
+numbeFairyTale = 1
 defaultNameFairyTales = "Nová rozprávka"
 
 folderFairyTales = "Rozprávky"
@@ -10,6 +10,7 @@ folderNewFairyTale = ARGV[0] || defaultNameFairyTales
 
 
 Dir.mkdir(folderFairyTales) unless Dir.exist?(folderFairyTales)
+
 Dir.open(folderFairyTales) do 
   Dir.chdir(folderFairyTales)
   Dir.mkdir("#{folderNewFairyTale} #{numbeFairyTale}")
@@ -17,18 +18,18 @@ Dir.open(folderFairyTales) do
   regex = Regexp.new("#{defaultNameFairyTales} \\d+")
   arrayDefalutNames = Dir.entries('.').select { |name| name.match?(regex)}
 
-arrayDefalutNames.sort! do |folder,other_folder| 
-       folder.match(/\d+/).to_s.to_i <=> other_folder.match(/\d+/).to_s.to_i
-end
+  arrayDefalutNames.sort! do |folder,other_folder| 
+    folder.match(/\d+/).to_s.to_i <=> other_folder.match(/\d+/).to_s.to_i
+  end
 
-arrayDefalutNames.each.with_index do |folder,i|
-     system 'rename',folder,(defaultNameFairyTales + " #{i+1}")
-end
+  arrayDefalutNames.each.with_index do |folder,i|
+    system 'rename',folder,(defaultNameFairyTales + " #{i+1}")
+  end
 
-#   if  folderNewFairyTale == defaultNameFairyTales
-#        Dir.mkdir("#{folderNewFairyTale} #{numbeFairyTale}")
-#        numbeFairyTale += 1;
-#   end
+   if  folderNewFairyTale == defaultNameFairyTales 
+        newCreateFolder = arrayDefalutNames[1].succ
+        Dir.mkdir("#{folderNewFairyTale} #{newCreateFolder}")
+   end
 end
 
 
