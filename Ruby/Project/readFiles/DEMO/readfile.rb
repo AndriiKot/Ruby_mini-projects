@@ -31,7 +31,7 @@ p arrayDefalutNames
    if  folderNewFairyTale == defaultNameFairyTales 
         #newCreateFolder = arrayDefalutNames[-1]
        #  p arrayDefalutNames[1]
-        Dir.mkdir("#{} XX")
+       # Dir.mkdir("#{} XX")
    end
 end
 
