@@ -13,7 +13,6 @@ Dir.mkdir(folderFairyTales) unless Dir.exist?(folderFairyTales)
 
 Dir.open(folderFairyTales) do 
   Dir.chdir(folderFairyTales)
-  Dir.mkdir("#{folderNewFairyTale} #{numbeFairyTale}")
 
   regex = Regexp.new("#{defaultNameFairyTales} \\d+")
   arrayDefalutNames = Dir.entries('.').select { |name| name.match?(regex)}
@@ -23,12 +22,16 @@ Dir.open(folderFairyTales) do
   end
 
   arrayDefalutNames.each.with_index do |folder,i|
-    system 'rename',folder,(defaultNameFairyTales + " #{i+1}")
+    newName = "#{defaultNameFairyTales} #{i + 1}"
+    system 'rename',folder,newName
+    arrayDefalutNames[i] = newName
   end
+p arrayDefalutNames
 
    if  folderNewFairyTale == defaultNameFairyTales 
-        newCreateFolder = arrayDefalutNames[-1].succ
-        Dir.mkdir("#{folderNewFairyTale} #{newCreateFolder}")
+        #newCreateFolder = arrayDefalutNames[-1]
+       #  p arrayDefalutNames[1]
+        Dir.mkdir("#{} XX")
    end
 end
 
