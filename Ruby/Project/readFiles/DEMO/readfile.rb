@@ -32,6 +32,10 @@ Dir.open(folderFairyTales) do
        newCreateFolder = arrayDefalutNames[-1]
        Dir.mkdir("#{newCreateFolder.succ}")
    end
+   p Dir.entries('.')
+   if  Dir.entries('.').include? folderNewFairyTale
+      puts "#{folderNewFairyTale} уже существует!"
+   end
 end
 
 
