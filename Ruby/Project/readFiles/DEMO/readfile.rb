@@ -30,8 +30,8 @@ Dir.open(folderFairyTales) do
   loop do
    
    if  folderNewFairyTale == defaultNameFairyTales || folderNewFairyTale == ''
-       newCreateFolder = arrayDefalutNames[-1]
-       break Dir.mkdir("#{newCreateFolder.succ}")
+       newCreateFolder = arrayDefalutNames[-1] || "#{defaultNameFairyTales} #{numbeFairyTale}"
+       break Dir.mkdir("#{newCreateFolder}")
    end
 
 
