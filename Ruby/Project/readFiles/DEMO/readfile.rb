@@ -32,7 +32,7 @@ Dir.open(folderFairyTales) do
    
 
 
-   if  folderNewFairyTale == defaultNameFairyTales || @newName == ''
+   if  folderNewFairyTale == defaultNameFairyTales || folderNewFairyTale == ''
        newCreateFolder = arrayDefalutNames[-1]
        break Dir.mkdir("#{newCreateFolder.succ}")
    end
