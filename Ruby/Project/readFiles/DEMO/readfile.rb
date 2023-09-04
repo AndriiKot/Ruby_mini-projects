@@ -32,7 +32,6 @@ Dir.open(folderFairyTales) do
    if  folderNewFairyTale == defaultNameFairyTales || folderNewFairyTale == ''
      if arrayDefalutNames.size.equal? 0
        firstFairyTale = "#{defaultNameFairyTales} #{numbeFairyTale}"
-       p "first !!!"
        break Dir.mkdir(firstFairyTale)
      end
        newCreateFolder = arrayDefalutNames[-1].succ
@@ -41,15 +40,12 @@ Dir.open(folderFairyTales) do
 
 
    if  Dir.entries('.').include? folderNewFairyTale
-      p Dir.entries('.')
-      p Dir.entries('.').include? folderNewFairyTale
       puts "#{folderNewFairyTale} уже существует!"
       print "В ведеите новое имя: "
       folderNewFairyTale = $stdin.gets.strip!
       next
    end
 
-     p "Exit" 
      break Dir.mkdir(folderNewFairyTale) 
   end
 
