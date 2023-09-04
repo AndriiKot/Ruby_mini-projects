@@ -35,6 +35,8 @@ Dir.open(folderFairyTales) do
    p Dir.entries('.')
    if  Dir.entries('.').include? folderNewFairyTale
       puts "#{folderNewFairyTale} уже существует!"
+      print "В ведеите новое имя: "
+      newName = $stdin.gets.strip!
    end
 end
 
