@@ -1,11 +1,14 @@
 ﻿hash_Folders = {}
 hash_Folders.default = ''
 
-def create_element_name() = gets.strip
-def next_step(str) = return self.send('break')
+def create_element_name() = my_break(gets.strip)
+def my_break(str) = str == '' ? false : str 
 
 loop do
-    element_key = create_name_folder_or_file()
-    element_value = create_name_folder_or_file()
+    element_key = create_element_name || break
+    element_value = create_element_name || break
     hash_Folders[element_key] = element_value
 end
+
+hash_Folders.delete_if {|key, value| key == '' or value == ''}
+p hash_Folders
