@@ -1,16 +1,11 @@
 ﻿hash_Folders = {}
+hash_Folders.default = ''
 
-hash_Folders.default = 'test'
-p hash_Folders
-p hash_Folders['bar']
-counts = {foo: 42}
-p counts.default = '' # => nil (default)
-counts[:foo] = 42
+def create_element_name() = gets.strip
+def next_step(str) = return self.send('break')
 
-p counts[:bar]
-
-
-
-
-
-
+loop do
+    element_key = create_name_folder_or_file()
+    element_value = create_name_folder_or_file()
+    hash_Folders[element_key] = element_value
+end
