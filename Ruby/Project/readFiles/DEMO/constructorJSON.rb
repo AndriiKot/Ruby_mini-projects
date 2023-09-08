@@ -7,6 +7,10 @@ def is_file?(str)
     'file' if str.casecmp?('file') || str.casecmp?('f')
 end
 
+def is_empty?(str)
+    '' if str.empty?
+end
+
 def is_folder?(str)
     'folder' if str.casecmp?('folder') || str.casecmp?('dir') || str.casecmp?('d')
 end
@@ -16,7 +20,7 @@ def print_question_name(str) = print "Enter name #{str}: "
 loop do
     print_question_folder_or_file
     get_answer = gets.strip
-    answeer_folder_or_file = is_file?(get_answer) || is_folder?(get_answer)
+    answeer_folder_or_file = is_file?(get_answer) || is_folder?(get_answer) || is_empty?(get_answer)
     p answeer_folder_or_file
     next
 end
