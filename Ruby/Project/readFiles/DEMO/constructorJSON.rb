@@ -17,10 +17,8 @@ loop do
     print_question_folder_or_file
     get_answer = gets.strip
     answeer_folder_or_file = is_file?(get_answer) || is_folder?(get_answer)
-    p 'next'
-    next unless answeer_folder_or_file == ''
-    p "break"
-    break unless answeer_folder_or_file
+    p answeer_folder_or_file
+    next
 end
 
 
