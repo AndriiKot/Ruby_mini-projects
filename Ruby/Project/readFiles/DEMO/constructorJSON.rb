@@ -1,14 +1,22 @@
 ﻿hash_Folders = {}
 hash_Folders.default = ''
 
-def create_element = print "Create Folder or File?('d'/'f'): "
-def folder_or_file(str) = is_folder?(str) || is_file?(str)
-def is_folder?(str) = print "is folder"
-def is_file?(str) =  print "is file"
-def enter_name(str) = print "Enter name #{str}: "
+def print_question = print "Create Folder or File?('d'/'f'): "
+def enter_gets =  gets.strip
 
-create_element; folder_or_file('str'); folder_or_file(nil)
-enter_name('folder')
+def is_file?(str) 
+    true if str.casecmp?('file') || str.casecmp?('f')
+end
+
+def file_or_folder(boolean) = boolean ? 'file' : 'folder'
+def print_question_name(str) = print "Enter name #{str}: "
+
+print_question
+element = file_or_folder(is_file?(enter_gets))
+p element
+
+
+
 
 # def create_element_name() = my_break(gets.strip)
 # def empty_str?(str) = str == '' ? true : fasle 
