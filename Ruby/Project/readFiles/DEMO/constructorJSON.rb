@@ -2,6 +2,13 @@
 hash_Folders.default = ''
 
 def print_question_folder_or_file = print "Create Folder or File?('d'/'f'): "
+def print_next_step = print "Push Enter to next step."
+def print_wrong_data_folder_or_file 
+    print "Wrong data"
+    print_question_folder_or_file
+    print "/n or /n"
+    print_next_step
+end
 
 def is_file?(str) 
     'file' if str.casecmp?('file') || str.casecmp?('f')
@@ -17,6 +24,7 @@ end
 
 def print_question_name(str) = print "Enter name #{str}: "
 
+print_wrong_data_folder_or_file 
 loop do
     print_question_folder_or_file
     get_answer = gets.strip
