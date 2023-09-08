@@ -22,7 +22,8 @@ loop do
     get_answer = gets.strip
     answeer_folder_or_file = is_file?(get_answer) || is_folder?(get_answer) || is_empty?(get_answer)
     p answeer_folder_or_file
-    next
+    next unless answeer_folder_or_file
+    break if answeer_folder_or_file == ''
 end
 
 
