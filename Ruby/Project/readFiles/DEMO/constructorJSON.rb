@@ -1,11 +1,13 @@
-﻿hash_Folders = {}
-hash_Folders.default = ''
+﻿
+def print_ques_file = print "Create File?('Y/N'): "
+def print_ques_folder = print "Create Folder?('Y/N'): "
+def print_ques_name(str) = print "Enter name #{str}: "
+def yes_?(str) = str.casecmp? 'y' || str.casecmp? 'yes'
 
-def print_question_folder_or_file = print "Create Folder or File?('d'/'f'): "
 def print_next_step = print "Push Enter to next step."
 def print_wrong_data_folder_or_file 
     puts "Wrong data"
-    print_question_folder_or_file
+    print_question
     print "\n or \n"
     print_next_step
     print "\n"
@@ -23,11 +25,10 @@ def is_folder?(str)
     'folder' if str.casecmp?('folder') || str.casecmp?('dir') || str.casecmp?('d')
 end
 
-def print_question_name(str) = print "Enter name #{str}: "
 
 print_wrong_data_folder_or_file 
 loop do
-    print_question_folder_or_file
+    print_question
     get_answer = gets.strip
     answeer_folder_or_file = is_file?(get_answer) || is_folder?(get_answer) || is_empty?(get_answer)
     p answeer_folder_or_file
