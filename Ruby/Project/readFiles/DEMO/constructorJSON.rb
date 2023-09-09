@@ -5,6 +5,15 @@ def print_ques_name(str) = print "Enter name #{str}: "
 def yes_?(str) = str.casecmp?('y') || str.casecmp?('yes')
 def print_next_step = print "Push Enter to next step."
 
+print_ques_file
+puts
+print_ques_folder
+puts
+print_ques_name('XXX')
+puts
+yes_?('yEs')
+puts
+print_next_step
 
 
 
