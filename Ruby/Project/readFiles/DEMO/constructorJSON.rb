@@ -2,11 +2,7 @@
 def print_ques_file = print "Create File?('Y/N'): "
 def print_ques_folder = print "Create Folder?('Y/N'): "
 def print_ques_name(str) = print "Enter name #{str}: "
-def yes_?(str) = str.casecmp? 'y' || str.casecmp? 'yes'
-def is_empty?(str) = '' if str.empty?
-
-
-
+def yes_?(str) = str.casecmp?('y') || str.casecmp?('yes')
 def print_next_step = print "Push Enter to next step."
 
 
