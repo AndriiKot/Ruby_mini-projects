@@ -14,7 +14,7 @@ def find_nested_folders(folder_path, folder_name)
           nested_folders << item_path
         end
   
-        nested_folders += find_nested_folders_2(item_path, folder_name)
+        nested_folders += find_nested_folders(item_path, folder_name)
       end
     end
   
