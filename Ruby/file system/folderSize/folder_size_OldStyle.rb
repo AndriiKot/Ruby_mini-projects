@@ -7,3 +7,4 @@ def folder_size_bytes(folder_path)
     end
     total_size
 end
+
