@@ -1,5 +1,5 @@
 ﻿
-def find_nested_folders_2(folder_path, folder_name)
+def find_nested_folders(folder_path, folder_name)
     nested_folders = []
   
     Dir.foreach(folder_path) do |item|
