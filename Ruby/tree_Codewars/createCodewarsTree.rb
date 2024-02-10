@@ -1,13 +1,24 @@
-﻿main_folder = ARGV[0]
+﻿folder_name = ARGV[0]
 
-p main_folder
-def createTreeCodewars(main_folder = 'main_folder')
-    if Dir.exist?("./")
-        p "#{main_folder}: exist? Yes"
+p folder_name
+def createTreeCodewars(folder_name)
+    folder_name  ||= 'folder_name'
+    if Dir.exist?("./#{folder_name}")
+        p "#{folder_name}: exist? Yes"
+        count = 1
+        loop do
+           folder_path = "#{folder_name}#{count}"
+           p folder_path
+           count += 1
+            unless Dir.exist? folder_path
+                Dir.mkdir(folder_path)
+                break
+            end
+        end
     else
-        p "#{main_folder}: exist? No"
+        p "#{folder_name}: exist? No"
     end
-# Dir.mkdir(main_folder)
+# Dir.mkdir(folder_name)
 
 # (1..8).each do |i|
 #     folder_name = "#{i}"
@@ -18,5 +29,5 @@ def createTreeCodewars(main_folder = 'main_folder')
 #   end
 end
 
-createTreeCodewars(main_folder)
+createTreeCodewars(folder_name)
   
