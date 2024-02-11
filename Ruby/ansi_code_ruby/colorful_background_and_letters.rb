@@ -9,6 +9,7 @@
         print "\e[0m" 
     end 
     print "\e[0m"  
+    sleep 0.1
 end
 
 
