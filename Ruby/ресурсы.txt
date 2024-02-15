@@ -1,3 +1,10 @@
 ﻿
 Ruby Documentation:
 https://rubyapi.org/3.3/o/fileutils#method-c-touch
+
+Direnv:
+
+zsh:
+
+fzf:
+
