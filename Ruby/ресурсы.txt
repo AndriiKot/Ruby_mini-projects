@@ -8,3 +8,7 @@ zsh:
 
 fzf:
 
+entr(1)
+Следить за изменением:
+https://eradman.com/entrproject/
+
