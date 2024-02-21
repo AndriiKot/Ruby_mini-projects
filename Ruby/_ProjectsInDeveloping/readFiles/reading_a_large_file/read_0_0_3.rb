@@ -1,0 +1,1 @@
+﻿p File.foreach("input.txt").inject(0) { |sum, line| sum + line.to_i } % 2**64
