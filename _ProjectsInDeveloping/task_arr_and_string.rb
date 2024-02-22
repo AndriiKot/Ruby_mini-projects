@@ -29,10 +29,9 @@ sum_V_3_0 = 0
 arr = []
 
 targets.each do |target|
-  p target.scan(/\d+/)
   arr += target.scan(/\d+/).map(&:to_f)
 end
-sum_V_3 = arr.sum
+sum_V_3_0 = arr.sum
 arr = nil
 
 # Version-3_1
@@ -41,9 +40,6 @@ arr = nil
 sum_V_3_1 = targets.map do |target| 
   target.scan(/\d+/).map!(&:to_i)
 end.flatten.sum
-
-p sum_V_3_1
-
 
 
 p sum_V_1
