@@ -14,6 +14,6 @@ create_tree_folders_Codewars()
 
 # TEST:
 # Adding to an existing project 'Codewars'
-# $ ruby createCodewarsTree_version_1_0_1.rb ruby javascript go scala java c c++ rust 
+# $ ruby createCodewarsTree_version_1_0_2.rb ruby javascript go scala java c c++ rust 
 #
 
