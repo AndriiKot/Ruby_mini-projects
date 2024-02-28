@@ -8,8 +8,7 @@ dir.each_child  do |folder|
     if folder.match?(regex)
         folder.strip.each_char do |chr|
             if chr.match?(/-/) || chr.match?('\s')
-                chr.replace('_')
-                new_folder_name += chr
+                new_folder_name += '_'
                 next
             end
               next if chr.match?(regex) 
