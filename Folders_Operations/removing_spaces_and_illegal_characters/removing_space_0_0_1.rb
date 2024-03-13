@@ -1,4 +1,4 @@
-﻿
+﻿﻿
 dir = Dir.new('./')
 
 dir.each_child  do |folder| 
@@ -18,4 +18,3 @@ dir.each_child  do |folder|
         File.rename(folder, new_folder_name)
     end
 end
-
