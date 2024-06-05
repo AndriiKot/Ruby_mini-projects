@@ -11,7 +11,11 @@ response = http.request(request)
 
 if response.code == '200'
   data = JSON.parse(response.body)
-  puts data
-else
-  puts "HTTP request failed: #{response.code} #{response.message}"
+  ranks = "ranks['overall']"
+  overall_kyu = ranks + "['name']"
+  overall_score = ranks +"['score']"
+  languages = ranks + "['languages']"
+  arr = %W_username honor leaderboarPosition #{overall_kyu}
+        #{overall_score} #{languages}_ 
+  p arr
 end
